@@ -1,0 +1,11 @@
+{
+  "school": "Apex Model School",
+  "address": "Sharjah, UAE",
+  "phone": "+971 XXXXXXXX",
+  "email": "info@apexschool.ae",
+  "links": [
+    { "label": "Admissions", "url": "/admissions" },
+    { "label": "Programs", "url": "/programs" },
+    { "label": "Contact", "url": "/contact" }
+  ]
+}

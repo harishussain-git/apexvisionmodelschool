@@ -1,0 +1,17 @@
+{
+  "title": "Apex Model School",
+  "subtitle": "Where Future Leaders Begin",
+  "caption": "Sharjah, UAE",
+  "buttons": [
+    {
+      "label": "Explore Programs",
+      "link": "#programs"
+    },
+    {
+      "label": "Apply Now",
+      "link": "/admissions"
+    }
+  ],
+  "frames": 30,
+  "folder": "hero"
+}

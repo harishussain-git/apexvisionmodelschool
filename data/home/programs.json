@@ -1,0 +1,143 @@
+{
+  "classroom": {
+    "title": "Modern Classrooms",
+    "subtitle": "Interactive learning spaces for young minds",
+    "caption": "Technology-enabled classrooms designed for engagement.",
+    "frames": 30,
+    "folder": "classroom",
+
+    "popup": {
+      "title": "Inside Our Classrooms",
+      "features": [
+        {
+          "name": "Smart Boards",
+          "image": "/images/programs/classroom/smartboard.jpg",
+          "description": "Interactive teaching tools for modern education."
+        },
+        {
+          "name": "Small Class Sizes",
+          "image": "/images/programs/classroom/classsize.jpg",
+          "description": "Better attention for every student."
+        }
+      ]
+    }
+  },
+
+  "educraft": {
+    "title": "Educraft Lab",
+    "subtitle": "Hands-on creativity and innovation",
+    "caption": "Students build real-world skills through projects.",
+    "frames": 30,
+    "folder": "educraft",
+
+    "popup": {
+      "title": "Innovation Lab",
+      "features": [
+        {
+          "name": "Robotics",
+          "image": "/images/programs/educraft/robotics.jpg"
+        },
+        {
+          "name": "3D Printing",
+          "image": "/images/programs/educraft/3dprint.jpg"
+        }
+      ]
+    }
+  },
+
+  "karate": {
+    "title": "Karate Training",
+    "subtitle": "Discipline, focus, and physical confidence",
+    "caption": "Structured martial arts sessions that build character and fitness.",
+    "frames": 30,
+    "folder": "karate",
+
+    "popup": {
+      "title": "Karate Program Highlights",
+      "features": [
+        {
+          "name": "Belt Progression",
+          "image": "/images/programs/karate/belts.jpg",
+          "description": "Students advance through skill-based milestones."
+        },
+        {
+          "name": "Self-Defense Basics",
+          "image": "/images/programs/karate/self-defense.jpg",
+          "description": "Practical techniques taught in a safe environment."
+        }
+      ]
+    }
+  },
+
+  "carpenter": {
+    "title": "Carpentry Studio",
+    "subtitle": "Design, build, and create with your hands",
+    "caption": "Project-based woodworking sessions for practical creativity.",
+    "frames": 30,
+    "folder": "carpenter",
+
+    "popup": {
+      "title": "Carpentry Studio Features",
+      "features": [
+        {
+          "name": "Tool Safety",
+          "image": "/images/programs/carpenter/tools.jpg",
+          "description": "Hands-on guidance for safe and effective tool use."
+        },
+        {
+          "name": "Model Building",
+          "image": "/images/programs/carpenter/models.jpg",
+          "description": "Students craft real mini-projects from concept to finish."
+        }
+      ]
+    }
+  },
+
+  "sports": {
+    "title": "Sports Arena",
+    "subtitle": "Team spirit and athletic development",
+    "caption": "Daily sports activities that improve stamina and collaboration.",
+    "frames": 30,
+    "folder": "sports",
+
+    "popup": {
+      "title": "Sports Program Highlights",
+      "features": [
+        {
+          "name": "Multi-Sport Training",
+          "image": "/images/programs/sports/training.jpg",
+          "description": "Exposure to multiple games for balanced physical growth."
+        },
+        {
+          "name": "Inter-House Matches",
+          "image": "/images/programs/sports/matches.jpg",
+          "description": "Friendly competition that builds leadership and teamwork."
+        }
+      ]
+    }
+  },
+
+  "communication": {
+    "title": "Communication Lab",
+    "subtitle": "Public speaking and expressive confidence",
+    "caption": "Language and communication activities for real-world fluency.",
+    "frames": 30,
+    "folder": "communication",
+
+    "popup": {
+      "title": "Communication Lab Features",
+      "features": [
+        {
+          "name": "Speech Practice",
+          "image": "/images/programs/communication/speech.jpg",
+          "description": "Guided speaking exercises for confident expression."
+        },
+        {
+          "name": "Group Discussions",
+          "image": "/images/programs/communication/discussion.jpg",
+          "description": "Collaborative activities to improve listening and clarity."
+        }
+      ]
+    }
+  }
+}
