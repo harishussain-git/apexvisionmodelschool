@@ -148,7 +148,7 @@ export default function ProgramSection({ program }) {
       </div>
 
       {/* Expanded popup */}
-      <div className="flex h-full w-full bg-black/70 z-1000 fixed top-0 left-0 justify-center items-center " id="program-popup-expanded-container">
+      <div className="flex h-full w-full bg-black/70 z-1000 fixed top-0 left-0 justify-center items-center hidden" id="program-popup-expanded-container">
 
         <div className="bg-white/30  md:rounded-2xl backdrop-blur-3xl p-2 border border-white/80  md:max-w-[clamp(22rem,70vw,72rem)] md:top-14 w-full h-full md:h-[clamp(28rem,80vh,70rem)]
   " id="program-popup-expanded">
