@@ -4,6 +4,7 @@ import SiteHeader from "../components/navigation/SiteHeader";
 import SoundBtn from "../components/ui/SoundBtn";
 import LenisProvider from "../components/ui/LenisProvider";
 import FloatingSectionControls from "../components/navigation/FloatingSectionControls";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
         <FloatingSectionControls />
 
         {children}
+        <Analytics />
       </body>
     </html>
   );
