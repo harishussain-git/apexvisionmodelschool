@@ -11,11 +11,11 @@ export default function HeroSection() {
 
           <div className="pt-30 flex flex-col items-center justify-center gap-4 w-full">
 
-            <p className="text-eyebrow flex justify-center items-center gap-2 font-semibold text-primary-500"><span className="bg-primary-500 text-white p-1.5 rounded text-[12px] font-normal">45+</span> Years of Educational Excellence</p>
+            <p className="uppercase font-body flex  tracking-wide justify-center items-center gap-2 font-semibold text-primary-500"><span className="bg-primary-500 text-white p-1.5 rounded text-[12px] font-normal">45+</span> Years of Educational Excellence</p>
 
-            <h1 className="text-display font-clash-display text-center max-w-[24ch]">Education that shapes character and confidence</h1>
+            <h1 className="text-display font-semibold font-accent uppercase text-center max-w-[24ch]">Education that shapes character and confidence</h1>
 
-            <p className="text-body font-bricolage-grotesque text-center  max-w-[64ch] hidden md:block">We guide students through a thoughtful journey —  balancing academic excellence, moral grounding, family values, and the skills needed for the modern world.</p>
+            <p className=" font-body text-center  max-w-[64ch] hidden md:block">We guide students through a thoughtful journey —  balancing academic excellence, moral grounding, family values, and the skills needed for the modern world.</p>
           </div>
 
 
