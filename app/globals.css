@@ -1,26 +1,198 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Bricolage+Grotesque:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-primary-500: #334086;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary-500: var(--color-primary-500);
+  --font-sans: "Lato", Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+/* RFRufo local font family */
+
+@font-face {
+  font-family: "RFRufo";
+  src: url("/font/RFRufo-Light.woff2") format("woff2"),
+       url("/font/RFRufo-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: "RFRufo";
+  src: url("/font/RFRufo-Regular.woff2") format("woff2"),
+       url("/font/RFRufo-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RFRufo";
+  src: url("/font/RFRufo-Semibold.woff2") format("woff2"),
+       url("/font/RFRufo-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RFRufo";
+  src: url("/font/RFRufo-Bold.woff2") format("woff2"),
+       url("/font/RFRufo-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base */
+
+html,
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+/* Utility font classes */
+
+.font-body {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+.font-accent {
+  font-family: "RFRufo", Arial, Helvetica, sans-serif;
+}
+
+.font-clash-display {
+  font-family: "Clash Display", Arial, Helvetica, sans-serif;
+}
+
+.font-bricolage-grotesque {
+  font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
+}
+
+/* Typography tokens */
+
+@layer base {
+  .text-eyebrow {
+    font-family: "RFRufo", Arial, Helvetica, sans-serif;
+    font-size: clamp(0.75rem, 0.7rem + 0.2vw, 0.95rem);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .text-display {
+    font-family: "RFRufo", Arial, Helvetica, sans-serif;
+    font-size: clamp(2.4rem, 1.2rem + 4vw, 6rem);
+    font-weight: 500;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+  }
+
+  .text-heading {
+    font-family: "RFRufo", Arial, Helvetica, sans-serif;
+    font-size: clamp(1.8rem, 1.1rem + 2vw, 3rem);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  .text-body-lg {
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-size: clamp(1rem, 0.9rem + 0.35vw, 1.2rem);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .text-body {
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-size: clamp(0.95rem, 0.85rem + 0.25vw, 1.05rem);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .text-caption {
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-size: clamp(0.75rem, 0.7rem + 0.15vw, 0.85rem);
+    font-weight: 400;
+    line-height: 1.4;
+  }
+}
+
+@layer base {
+
+  /* Eyebrow / badge text */
+  .text-eyebrow {
+    font-size: clamp(0.75rem, 0.7rem + 0.2vw, 0.95rem);
+    /* letter-spacing: 0.08em; */
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  /* Highest display title */
+  .text-display-xl {
+    font-size: clamp(1rem, 1.2rem + 6vw, 5rem);
+    line-height: 1.1;
+    /* letter-spacing: -0.03em; */
+    font-weight: 500;
+  }
+
+  /* Hero display title */
+  .text-display {
+    font-size: clamp(1rem, 1.2rem + 4vw, 4rem);
+    line-height: 0.95;
+    /* letter-spacing: -0.03em; */
+    font-weight: 500;
+  }
+
+  /* Section headings */
+  .text-heading {
+    font-size: clamp(1.6rem, 1.1rem + 2vw, 2.4rem);
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    font-weight: 600;
+  }
+
+  /* Supporting paragraph */
+  .text-body-lg {
+    font-size: clamp(1rem, 0.9rem + 0.35vw, 1.2rem);
+    line-height: 1.6;
+  }
+
+  /* Normal paragraph */
+  .text-body {
+    font-size: clamp(0.95rem, 0.85rem + 0.25vw, 1.5rem);
+    line-height: 1.6;
+  }
+
+  /* Small UI text */
+  .text-caption {
+    font-size: clamp(0.75rem, 0.7rem + 0.15vw, 0.85rem);
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+
+  .section-padding {
+    padding-block: clamp(4rem, 8vw, 8rem);
+  }
+
+  .container-width {
+    width: min(92vw, 1280px);
+    margin-inline: auto;
+  }
 }

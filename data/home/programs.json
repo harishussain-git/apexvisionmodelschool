@@ -1,141 +1,215 @@
 {
   "classroom": {
-    "title": "Modern Classrooms",
-    "subtitle": "Interactive learning spaces for young minds",
+    "section-name": "Modern Classrooms",
+    "section-heading": "Interactive ",
     "caption": "Technology-enabled classrooms designed for engagement.",
+    "metric-count": "20-25%",
+    "metric-count-text": "of students show improved engagement",
+    "section-bg-image": "/homepage/clay/classroom-clay.webp",
     "frames": 30,
     "folder": "classroom",
 
     "popup": {
-      "title": "Inside Our Classrooms",
       "features": [
         {
           "name": "Smart Boards",
-          "image": "/images/programs/classroom/smartboard.jpg",
+          "image": "/homepage/popup/image-placeholder.png",
           "description": "Interactive teaching tools for modern education."
         },
         {
           "name": "Small Class Sizes",
-          "image": "/images/programs/classroom/classsize.jpg",
+          "image": "/homepage/popup/image-placeholder.png",
           "description": "Better attention for every student."
+        },
+        {
+          "name": "Collaborative Learning",
+          "image": "/homepage/popup/image-placeholder.png",
+          "description": "Students work in groups to build communication and problem-solving skills."
+        },
+        {
+          "name": "Digital Assessments",
+          "image": "/homepage/popup/image-placeholder.png",
+          "description": "Quick feedback tools help teachers track progress and support each learner."
         }
       ]
     }
   },
 
   "educraft": {
-    "title": "Educraft Lab",
-    "subtitle": "Hands-on creativity and innovation",
+    "section-name": "Educraft Lab",
+    "section-heading": "Hands-on creativity and innovation",
     "caption": "Students build real-world skills through projects.",
+    "metric-count": "30%",
+    "metric-count-text": "increase in project-based learning confidence",
+    "section-bg-image": "/homepage/clay/educraft-clay.webp",
     "frames": 30,
     "folder": "educraft",
 
     "popup": {
-      "title": "Innovation Lab",
       "features": [
         {
           "name": "Robotics",
-          "image": "/images/programs/educraft/robotics.jpg"
+          "image": "/homepage/popup/image-placeholder.png",
+          "description": "Students design and program robots to solve practical challenges."
         },
         {
           "name": "3D Printing",
-          "image": "/images/programs/educraft/3dprint.jpg"
+          "image": "/homepage/popup/image-placeholder.png",
+          "description": "Ideas move from sketches to physical models through guided prototyping."
+        },
+        {
+          "name": "Design Thinking",
+          "image": "/homepage/popup/image-placeholder.png",
+          "description": "Learners follow a creative process to test, improve, and present solutions."
+        },
+        {
+          "name": "Maker Projects",
+          "image": "/homepage/popup/image-placeholder.png",
+          "description": "Hands-on builds encourage innovation, teamwork, and technical confidence."
         }
       ]
     }
   },
 
   "karate": {
-    "title": "Karate Training",
-    "subtitle": "Discipline, focus, and physical confidence",
+    "section-name": "Karate Training",
+    "section-heading": "Discipline, focus, and physical confidence",
     "caption": "Structured martial arts sessions that build character and fitness.",
+    "metric-count": "40%",
+    "metric-count-text": "improvement in focus and physical discipline",
+    "section-bg-image": "/homepage/clay/kartate-clay.webp",
     "frames": 30,
     "folder": "karate",
 
     "popup": {
-      "title": "Karate Program Highlights",
       "features": [
         {
           "name": "Belt Progression",
-          "image": "/images/programs/karate/belts.jpg",
+          "image": "/homepage/popup/image-placeholder.png",
           "description": "Students advance through skill-based milestones."
         },
         {
           "name": "Self-Defense Basics",
-          "image": "/images/programs/karate/self-defense.jpg",
+          "image": "/homepage/popup/image-placeholder.png",
           "description": "Practical techniques taught in a safe environment."
+        },
+        {
+          "name": "Discipline Training",
+          "image": "/homepage/popup/image-placeholder.png",
+          "description": "Structured practice builds focus, respect, and consistency."
+        },
+        {
+          "name": "Fitness Conditioning",
+          "image": "/homepage/popup/image-placeholder.png",
+          "description": "Strength, balance, and flexibility are developed through guided routines."
         }
       ]
     }
   },
 
   "carpenter": {
-    "title": "Carpentry Studio",
-    "subtitle": "Design, build, and create with your hands",
+    "section-name": "Carpentry Studio",
+    "section-heading": "Design, build, and create with your hands",
     "caption": "Project-based woodworking sessions for practical creativity.",
+    "metric-count": "35%",
+    "metric-count-text": "growth in practical problem-solving skills",
+    "section-bg-image": "/homepage/clay/carpenter-clay.webp",
     "frames": 30,
     "folder": "carpenter",
 
     "popup": {
-      "title": "Carpentry Studio Features",
       "features": [
         {
           "name": "Tool Safety",
-          "image": "/images/programs/carpenter/tools.jpg",
+          "image": "/homepage/popup/image-placeholder.png",
           "description": "Hands-on guidance for safe and effective tool use."
         },
         {
           "name": "Model Building",
-          "image": "/images/programs/carpenter/models.jpg",
+          "image": "/homepage/popup/image-placeholder.png",
           "description": "Students craft real mini-projects from concept to finish."
+        },
+        {
+          "name": "Material Basics",
+          "image": "/homepage/popup/image-placeholder.png",
+          "description": "Learners understand wood types, measurements, and build planning."
+        },
+        {
+          "name": "Creative Prototyping",
+          "image": "/homepage/popup/image-placeholder.png",
+          "description": "Students turn ideas into practical models with guided workshop support."
         }
       ]
     }
   },
 
   "sports": {
-    "title": "Sports Arena",
-    "subtitle": "Team spirit and athletic development",
+    "section-name": "Sports Arena",
+    "section-heading": "Team spirit and athletic development",
     "caption": "Daily sports activities that improve stamina and collaboration.",
+    "metric-count": "45%",
+    "metric-count-text": "increase in team participation and fitness",
+    "section-bg-image": "/homepage/clay/sports-clay.webp",
     "frames": 30,
     "folder": "sports",
 
     "popup": {
-      "title": "Sports Program Highlights",
       "features": [
         {
           "name": "Multi-Sport Training",
-          "image": "/images/programs/sports/training.jpg",
+          "image": "/homepage/popup/image-placeholder.png",
           "description": "Exposure to multiple games for balanced physical growth."
         },
         {
           "name": "Inter-House Matches",
-          "image": "/images/programs/sports/matches.jpg",
+          "image": "/homepage/popup/image-placeholder.png",
           "description": "Friendly competition that builds leadership and teamwork."
+        },
+        {
+          "name": "Skill Drills",
+          "image": "/homepage/popup/image-placeholder.png",
+          "description": "Regular drills improve stamina, coordination, and game awareness."
+        },
+        {
+          "name": "Team Strategy",
+          "image": "/homepage/popup/image-placeholder.png",
+          "description": "Students learn communication and tactical decision-making in team play."
         }
       ]
     }
   },
 
   "communication": {
-    "title": "Communication Lab",
-    "subtitle": "Public speaking and expressive confidence",
+    "section-name": "Communication Lab",
+    "section-heading": "Public speaking and expressive confidence",
     "caption": "Language and communication activities for real-world fluency.",
+    "metric-count": "50%",
+    "metric-count-text": "improvement in speaking confidence and clarity",
+    "section-bg-image": "/homepage/clay/comm-clay.webp",
     "frames": 30,
     "folder": "communication",
 
     "popup": {
-      "title": "Communication Lab Features",
       "features": [
         {
           "name": "Speech Practice",
-          "image": "/images/programs/communication/speech.jpg",
+          "image": "/homepage/popup/image-placeholder.png",
           "description": "Guided speaking exercises for confident expression."
         },
         {
           "name": "Group Discussions",
-          "image": "/images/programs/communication/discussion.jpg",
+          "image": "/homepage/popup/image-placeholder.png",
           "description": "Collaborative activities to improve listening and clarity."
+        },
+        {
+          "name": "Presentation Skills",
+          "image": "/homepage/popup/image-placeholder.png",
+          "description": "Students learn structure, voice control, and effective delivery."
+        },
+        {
+          "name": "Creative Writing",
+          "image": "/homepage/popup/image-placeholder.png",
+          "description": "Writing exercises strengthen vocabulary, expression, and storytelling."
         }
       ]
     }

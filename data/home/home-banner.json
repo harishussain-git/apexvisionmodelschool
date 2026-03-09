@@ -1,0 +1,19 @@
+{
+  "news": [
+    {
+      "id": "news1",
+      "title": "Admissions Open for Grades 1 to 8 for the Academic Year 2026-2027.",
+      "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=320&h=320&fm=webp&q=80"
+    },
+    {
+      "id": "news2",
+      "title": "Annual Sports Meet registrations are now live for all houses.",
+      "image": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=320&h=320&fm=webp&q=80"
+    },
+    {
+      "id": "news3",
+      "title": "Communication Fest and Public Speaking event start from April 2026.",
+      "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=320&h=320&fm=webp&q=80"
+    }
+  ]
+}
