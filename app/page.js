@@ -1,7 +1,7 @@
-import HeroSection from "@/components/home/HeroSection";
+import UnderDevelopment from "@/components/ui/UnderDevelopment";
 
 export default function Home() {
   return (
-    <HeroSection />
+    <UnderDevelopment />
   );
 }

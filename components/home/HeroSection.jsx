@@ -2,7 +2,7 @@
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative w-full bg-green-500 h-screen">
+    <section id="hero" className="relative w-full bg-gray-500 h-screen">
 
       <div className="absolute inset-0 z-20">
 
