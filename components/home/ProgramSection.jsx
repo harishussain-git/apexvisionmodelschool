@@ -122,7 +122,7 @@ export default function ProgramSection({ program }) {
       className="h-screen w-full bg-cover bg-center relative flex items-center justify-center "
       style={{ backgroundImage: `url(${sectionBgImage})` }}
     >
-      
+
       {/* Compact panel (kept with same classes/behavior you set) */}
       <div id="program-info-panel-compact" className="bg-white/30 rounded-2xl backdrop-blur-3xl w-full max-w-[90vw] p-2 border border-white/80 absolute md:max-w-[55ch] bottom-4 md:left-10 md:top-14 h-fit">
         <a className="flex items-center justify-between pt-1 pb-2 px-2" href="#program-popup-button">
@@ -148,20 +148,22 @@ export default function ProgramSection({ program }) {
       </div>
 
       {/* Expanded popup */}
-      <div className="flex h-full w-full bg-black/70 z-1000 fixed top-0 left-0 justify-center items-center hidden" id="program-popup-expanded-container">
-        <div className="bg-white/30 rounded-2xl backdrop-blur-3xl p-2 border border-white/80 w-full md:max-w-[clamp(22rem,70vw,72rem)] top-0 md:top-14 h-fit" id="program-popup-expanded">
-          <div className="flex items-center justify-between pt-2 pb-3 px-2">
-            <p className="text-caption uppercase">{sectionName}</p>
-            <button id="program-popup-close-btn" className="flex items-center h-8 w-8 justify-center bg-white rounded-full cursor-pointer" aria-label="Close popup">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 6l12 12M18 6L6 18" />
-              </svg>
-            </button>
-          </div>
+      <div className="flex h-full w-full bg-black/70 z-1000 fixed top-0 left-0 justify-center items-center " id="program-popup-expanded-container">
 
-          <div className="bg-white p-4 md:p-6 flex flex-col items-start gap-2 md:gap-5 rounded-xl overflow-auto max-h-[80vh] md:h-auto">
-            <p className="text-heading uppercase">{sectionTitle}</p>
-            <div className="w-full h-[2px] bg-black/5"></div>
+        <div className="bg-white/30  md:rounded-2xl backdrop-blur-3xl p-2 border border-white/80  md:max-w-[clamp(22rem,70vw,72rem)] md:top-14 w-full h-full md:h-[clamp(28rem,80vh,70rem)]
+  " id="program-popup-expanded">
+
+          <div className="bg-white p-4 md:p-6 flex flex-col items-start gap-2 md:gap-5 rounded-xl h-full md:h-fill">
+
+            {/* popup heading text & close btn */}
+            <div className="flex items-center justify-between  w-full">
+              <p className="text-caption uppercase">{sectionName}</p>
+              <button id="program-popup-close-btn" className="flex items-center h-8 w-8 justify-center bg-black/10 rounded-full cursor-pointer" aria-label="Close popup">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 6l12 12M18 6L6 18" />
+                </svg>
+              </button>
+            </div>
 
             <div className="flex justify-between w-full items-center">
               <div className="flex-col gap-2 pb-4">
@@ -193,7 +195,7 @@ export default function ProgramSection({ program }) {
             </div>
 
             {/* Mobile: vertical cards. Desktop: horizontal scrollable cards */}
-            <div ref={cardsRailRef} className="flex flex-col md:flex-row gap-4 w-full overflow-y-auto md:overflow-y-hidden md:overflow-x-auto">
+            <div ref={cardsRailRef} className="flex flex-col md:flex-row gap-4 w-full h-full overflow-y-auto md:overflow-y-hidden md:overflow-x-auto pb-8 md:pb-0">
               {features.map((feature, idx) => {
                 const featureTitle = feature?.sectionNameTitle || feature?.section_name_title || feature?.name || `Feature ${idx + 1}`;
                 const featureDesc = feature?.sectionNameDesc || feature?.section_name_desc || feature?.description || "";
@@ -209,7 +211,9 @@ export default function ProgramSection({ program }) {
               })}
             </div>
           </div>
+
         </div>
+
       </div>
     </section>
   );
