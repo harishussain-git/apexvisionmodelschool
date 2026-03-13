@@ -1,0 +1,16 @@
+{
+  "id": "hero",
+  "title": "Hero Sequence",
+  "subtitle": "Scroll to animate frames",
+  "folder": "hero",
+  "frameCount": 60,
+  "pixelsPerFrame": 45,
+  "snap": {
+    "enabled": true,
+    "cooldownMs": 900,
+    "down": {
+      "threshold": 0.92,
+      "target": "#section2"
+    }
+  }
+}

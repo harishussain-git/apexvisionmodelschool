@@ -11,6 +11,9 @@ export default function LenisProvider() {
       // wheelMultiplier: 1.2
     });
 
+    window.__lenis = lenis;
+    window.lenis = lenis;
+
     let frameId;
 
     const raf = (time) => {
@@ -22,6 +25,12 @@ export default function LenisProvider() {
 
     return () => {
       cancelAnimationFrame(frameId);
+      if (window.__lenis === lenis) {
+        window.__lenis = null;
+      }
+      if (window.lenis === lenis) {
+        window.lenis = null;
+      }
       lenis.destroy();
     };
   }, []);

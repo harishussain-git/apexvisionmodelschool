@@ -52,7 +52,7 @@ const ScrollDownBtn = ({ showIn = "#hero" }) => {
     <button
       type="button"
       onClick={handleScrollDown}
-      className={`fixed bottom-6 right-6 z-50 cursor-pointer items-center gap-2 rounded-full bg-white/20 p-1.5 backdrop-blur-3xl md:flex ${
+      className={`fixed bottom-6 ml-[50%] translate-x-[-50%] z-50 cursor-pointer items-center gap-2 rounded-full bg-white/20 p-1.5 backdrop-blur-3xl md:flex ${
         shouldShow ? "flex" : "hidden"
       }`}
       aria-label="Scroll down"
@@ -60,12 +60,17 @@ const ScrollDownBtn = ({ showIn = "#hero" }) => {
       <span className="font-clash-display bg-white px-6 py-2 font-medium rounded-full">
         Scroll
       </span>
+
+      {/* scroll up button */}
       <span className="bg-white rounded-full w-10 h-10 flex items-center justify-center">
         <img className="w-4 rotate-180" src="/icons/down.svg" alt="up" />
       </span>
+
+      {/* scroll down button */}
       <span className="bg-white rounded-full w-10 h-10 flex items-center justify-center">
         <img className="w-4" src="/icons/down.svg" alt="down" />
       </span>
+
     </button>
   );
 };
