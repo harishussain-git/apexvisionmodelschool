@@ -57,6 +57,21 @@ export function findNearestLoadedFrame(targetIndex, frameCount, loadedFrames) {
   return -1
 }
 
+export function buildFrameSources(basePath, folder, frameIndex) {
+  const zeroBased = String(frameIndex)
+  const oneBased = String(frameIndex + 1)
+  const paddedOneBased = String(frameIndex + 1).padStart(4, "0")
+
+  return [
+    `${basePath}/${folder}/${paddedOneBased}.webp`,
+    `${basePath}/${folder}/${oneBased}.webp`,
+    `${basePath}/${folder}/${zeroBased}.webp`,
+    `${basePath}/${folder}/${paddedOneBased}.jpg`,
+    `${basePath}/${folder}/${oneBased}.jpg`,
+    `${basePath}/${folder}/${zeroBased}.jpg`,
+  ]
+}
+
 export function getActiveAnchorByFrame(currentFrame, anchors = []) {
   if (!anchors.length) {
     return null

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 
 import SequenceChapterContent from "@/components/sequence-v2/SequenceChapterContent"
 import {
+  buildFrameSources,
   clamp,
   drawImageCover,
   findNearestLoadedFrame,
@@ -65,6 +66,8 @@ export default function SequenceChapter({ data }) {
 
     for (let frameIndex = 0; frameIndex < frameCount; frameIndex += 1) {
       const image = new Image()
+      const sources = buildFrameSources(data.basePath, data.folder, frameIndex)
+      let sourceIndex = 0
 
       image.onload = () => {
         if (canceled) {
@@ -87,10 +90,17 @@ export default function SequenceChapter({ data }) {
           return
         }
 
+        sourceIndex += 1
+
+        if (sourceIndex < sources.length) {
+          image.src = sources[sourceIndex]
+          return
+        }
+
         loadedFramesRef.current[frameIndex] = false
       }
 
-      image.src = `${data.basePath}/${data.folder}/${frameIndex}.webp`
+      image.src = sources[sourceIndex]
     }
 
     return () => {
