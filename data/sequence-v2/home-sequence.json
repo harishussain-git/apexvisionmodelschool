@@ -1,0 +1,155 @@
+{
+  "id": "home-story",
+  "folder": "home",
+  "basePath": "/sequences",
+  "frameCount": 267,
+  "heightVh": 660,
+  "showDebug": true,
+  "anchors": [
+    {
+      "id": "hero",
+      "contentType": "hero",
+      "currentFrame": 0,
+      "snap": true,
+      "content": {
+        "eyebrow": "Apex Model School",
+        "title": "A future-focused learning environment",
+        "subheading": "Built for clarity, confidence, and growth",
+        "description": "A premium APEX-style opening sequence that sets the tone inside one continuous story chapter.",
+        "cards": [
+          {
+            "title": "Modern Learning",
+            "text": "Learning spaces designed to support attention, calm, and academic ambition."
+          },
+          {
+            "title": "Strong Values",
+            "text": "A culture shaped by discipline, respect, and long-term character formation."
+          }
+        ]
+      }
+    },
+    {
+      "id": "cloudtext",
+      "contentType": "cloudtext",
+      "currentFrame": 14,
+      "snap": true,
+      "content": {
+        "title": "More than a school. A place where clarity, confidence, and capability grow together.",
+        "imageItems": [
+          {
+            "src": "/icons/apex-full-logo.webp",
+            "alt": "Apex logo",
+            "label": "Leadership"
+          },
+          {
+            "src": "/icons/down.svg",
+            "alt": "Direction icon",
+            "label": "Focus"
+          },
+          {
+            "src": "/icons/popup-arrow.svg",
+            "alt": "Growth icon",
+            "label": "Growth"
+          }
+        ]
+      }
+    },
+    {
+      "id": "school-front",
+      "contentType": "school-front",
+      "currentFrame": 50,
+      "snap": true,
+      "content": {
+        "title": "A campus designed for focused learning",
+        "description": "A calm, structured environment that gives students room to think clearly, move confidently, and engage deeply.",
+        "linkText": "See the campus",
+        "linkHref": "#",
+        "buttonText": "Book a Visit"
+      }
+    },
+    {
+      "id": "classroom",
+      "contentType": "feature",
+      "currentFrame": 100,
+      "snap": true,
+      "content": {
+        "eyebrow": "Learning Spaces",
+        "title": "Modern Classrooms",
+        "description": "Technology that supports learning without distraction.",
+        "buttonText": "Explore Classrooms",
+        "buttonHref": "#",
+        "items": ["Clear environment", "Guided learning", "Student comfort"]
+      }
+    },
+    {
+      "id": "educraft",
+      "contentType": "feature",
+      "currentFrame": 136,
+      "snap": true,
+      "content": {
+        "eyebrow": "Digital Learning",
+        "title": "Educraft",
+        "description": "Interactive education designed to build curiosity and confidence.",
+        "buttonText": "See Platform",
+        "buttonHref": "#",
+        "items": ["Gamified learning", "Student engagement", "Future ready"]
+      }
+    },
+    {
+      "id": "karate",
+      "contentType": "feature",
+      "currentFrame": 162,
+      "snap": true,
+      "content": {
+        "eyebrow": "Discipline",
+        "title": "Karate",
+        "description": "Training that develops confidence, respect, and self-control.",
+        "buttonText": "View Program",
+        "buttonHref": "#",
+        "items": ["Focus", "Respect", "Physical confidence"]
+      }
+    },
+    {
+      "id": "carpenter",
+      "contentType": "feature",
+      "currentFrame": 195,
+      "snap": true,
+      "content": {
+        "eyebrow": "Hands-on Learning",
+        "title": "Carpenter",
+        "description": "Practical experiences that help students build and understand.",
+        "buttonText": "See Workshop",
+        "buttonHref": "#",
+        "items": ["Craft", "Thinking", "Real-world skills"]
+      }
+    },
+    {
+      "id": "sports",
+      "contentType": "feature",
+      "currentFrame": 221,
+      "snap": true,
+      "content": {
+        "eyebrow": "Movement",
+        "title": "Sports",
+        "description": "A healthy environment that encourages teamwork and energy.",
+        "buttonText": "Explore Activities",
+        "buttonHref": "#",
+        "items": ["Fitness", "Team spirit", "Balance"]
+      }
+    },
+    {
+      "id": "communication",
+      "contentType": "feature",
+      "currentFrame": 265,
+      "snap": true,
+      "content": {
+        "eyebrow": "Expression",
+        "title": "Communication",
+        "description": "Students learn to present ideas clearly and confidently.",
+        "buttonText": "Discover More",
+        "buttonHref": "#",
+        "items": ["Speaking", "Confidence", "Clarity"]
+      }
+    }
+  ]
+}

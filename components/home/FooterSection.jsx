@@ -1,3 +1,3 @@
 export default function FooterSection() {
-  return <section>Footer Section</section>;
+  return <section id="footer">Footer Section</section>;
 }
