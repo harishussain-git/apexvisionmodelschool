@@ -6,7 +6,7 @@ import sequenceData from "@/data/dev/home-sequence.json"
 
 export default function DevPage() {
   return (
-    <main className="bg-neutral-950 text-white ">
+    <main className="bg-neutral-950 text-white saturate-0 ">
       <HomeSequenceScene data={sequenceData} />      
       <MoreDetailSection />
       <ContactSection />
