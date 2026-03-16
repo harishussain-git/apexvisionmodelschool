@@ -29,32 +29,6 @@
       }
     },
     {
-      "id": "cloudtext",
-      "contentType": "cloudtext",
-      "currentFrame": 14,
-      "snap": true,
-      "content": {
-        "title": "More than a school. A place where clarity, confidence, and capability grow together.",
-        "imageItems": [
-          {
-            "src": "/icons/apex-full-logo.webp",
-            "alt": "Apex logo",
-            "label": "Leadership"
-          },
-          {
-            "src": "/icons/down.svg",
-            "alt": "Direction icon",
-            "label": "Focus"
-          },
-          {
-            "src": "/icons/popup-arrow.svg",
-            "alt": "Growth icon",
-            "label": "Growth"
-          }
-        ]
-      }
-    },
-    {
       "id": "school-front",
       "contentType": "school-front",
       "currentFrame": 50,
