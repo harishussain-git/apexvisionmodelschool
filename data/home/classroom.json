@@ -1,0 +1,28 @@
+{
+  "section-name": "Learning Spaces",
+  "section-heading": "Modern Classrooms",
+  "caption": "Technology that supports learning without distraction.",
+  "card-position": "left",
+  "metric-count": "20-25%",
+  "metric-count-text": "of students show improved engagement",
+  "section-bg-image": "/homepage/clay/classroom-clay.webp",
+  "popup": {
+    "features": [
+      {
+        "name": "Clear environment",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Learning spaces designed to support calm focus and better classroom attention."
+      },
+      {
+        "name": "Guided learning",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Structured teaching moments help students stay supported as lessons progress."
+      },
+      {
+        "name": "Student comfort",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Comfortable, thoughtful layouts reduce distraction and improve daily learning experience."
+      }
+    ]
+  }
+}

@@ -80,7 +80,8 @@ export function getSectionMetrics(section, scrollY = getScrollY()) {
   const sectionTop = section.getBoundingClientRect().top + window.scrollY
   const sectionHeight = section.offsetHeight
   const viewportHeight = window.innerHeight
-  const maxScrollable = Math.max(1, sectionHeight - viewportHeight)
+  // Short full-screen sections still need a usable progress range for snap thresholds.
+  const maxScrollable = Math.max(1, viewportHeight, sectionHeight - viewportHeight)
   const progress = clamp((scrollY - sectionTop) / maxScrollable, 0, 1)
 
   return {

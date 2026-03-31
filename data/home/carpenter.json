@@ -1,0 +1,28 @@
+{
+  "section-name": "Hands-on Learning",
+  "section-heading": "Carpenter",
+  "caption": "Practical experiences that help students build and understand.",
+  "card-position": "right",
+  "metric-count": "35%",
+  "metric-count-text": "growth in practical problem-solving skills",
+  "section-bg-image": "/homepage/clay/carpenter-clay.webp",
+  "popup": {
+    "features": [
+      {
+        "name": "Craft",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Students work with real materials and tools to understand process and precision."
+      },
+      {
+        "name": "Thinking",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Projects encourage planning, measuring, and step-by-step decision making."
+      },
+      {
+        "name": "Real-world skills",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Hands-on workshop activities connect learning with practical capability."
+      }
+    ]
+  }
+}

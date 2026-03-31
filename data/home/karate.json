@@ -1,0 +1,28 @@
+{
+  "section-name": "Discipline",
+  "section-heading": "Karate",
+  "caption": "Training that develops confidence, respect, and self-control.",
+  "card-position": "left",
+  "metric-count": "40%",
+  "metric-count-text": "improvement in focus and physical discipline",
+  "section-bg-image": "/homepage/clay/kartate-clay.webp",
+  "popup": {
+    "features": [
+      {
+        "name": "Focus",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Students practice staying calm, attentive, and purposeful through structured routines."
+      },
+      {
+        "name": "Respect",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Training reinforces courtesy, discipline, and awareness in every session."
+      },
+      {
+        "name": "Physical confidence",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Movement, balance, and repetition help students feel stronger and more capable."
+      }
+    ]
+  }
+}

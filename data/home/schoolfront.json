@@ -1,7 +1,7 @@
 {
-  "title": "A Campus Designed for Learning",
-  "subtitle": "Modern classrooms, safe spaces, and inspiring environments.",
-  "caption": "A place where students grow academically and personally.",
-  "frames": 40,
-  "folder": "schoolfront"
+  "title": "A campus designed for focused learning",
+  "description": "A calm, structured environment that gives students room to think clearly, move confidently, and engage deeply.",
+  "linkText": "See the campus",
+  "linkHref": "#",
+  "buttonText": "Book a Visit"
 }

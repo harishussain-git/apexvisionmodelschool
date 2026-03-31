@@ -1,0 +1,28 @@
+{
+  "section-name": "Movement",
+  "section-heading": "Sports",
+  "caption": "A healthy environment that encourages teamwork and energy.",
+  "card-position": "right",
+  "metric-count": "45%",
+  "metric-count-text": "increase in team participation and fitness",
+  "section-bg-image": "/homepage/clay/sports-clay.webp",
+  "popup": {
+    "features": [
+      {
+        "name": "Fitness",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Daily activity supports strength, stamina, and healthy movement habits."
+      },
+      {
+        "name": "Team spirit",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Students learn to cooperate, communicate, and support one another in play."
+      },
+      {
+        "name": "Balance",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Sport helps students balance academics with movement, focus, and well-being."
+      }
+    ]
+  }
+}

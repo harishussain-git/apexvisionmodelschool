@@ -1,0 +1,28 @@
+{
+  "section-name": "Digital Learning",
+  "section-heading": "Educraft",
+  "caption": "Interactive education designed to build curiosity and confidence.",
+  "card-position": "right",
+  "metric-count": "30%",
+  "metric-count-text": "increase in project-based learning confidence",
+  "section-bg-image": "/homepage/clay/educraft-clay.webp",
+  "popup": {
+    "features": [
+      {
+        "name": "Gamified learning",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Interactive lessons make learning more memorable and motivating for students."
+      },
+      {
+        "name": "Student engagement",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Hands-on digital activities encourage participation and deeper understanding."
+      },
+      {
+        "name": "Future ready",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Students build confidence with tools and thinking styles suited to modern learning."
+      }
+    ]
+  }
+}

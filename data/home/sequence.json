@@ -1,0 +1,121 @@
+{
+  "id": "home-story",
+  "basePath": "/sequences",
+  "animatedHeightVh": 660,
+  "showDebug": true,
+  "sequenceManifest": {
+    "hero-cloudtext": { "frames": 50, "ext": "webp" },
+    "cloudtext-schoolfront": { "frames": 50, "ext": "webp" },
+    "schoolfront-classroom": { "frames": 36, "ext": "webp" },
+    "classroom-educraft": { "frames": 26, "ext": "webp" },
+    "educraft-karate": { "frames": 33, "ext": "webp" },
+    "karate-carpenter": { "frames": 26, "ext": "webp" },
+    "carpenter-sports": { "frames": 44, "ext": "webp" },
+    "sports-communication": { "frames": 20, "ext": "webp" }
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "animated",
+      "component": "HeroSection",
+      "contentKey": "hero",
+      "sequenceFolder": "hero-cloudtext",
+      "contentShowFrame": 1,
+      "snap": true
+    },
+    {
+      "id": "cloudtext",
+      "type": "animated",
+      "component": "CloudTextSection",
+      "contentKey": "cloudtext",
+      "sequenceFolder": "cloudtext-schoolfront",
+      "contentShowFrame": 1,
+      "snap": true
+    },
+    {
+      "id": "school-front",
+      "type": "animated",
+      "component": "SchoolFrontSection",
+      "contentKey": "school-front",
+      "sequenceFolder": "schoolfront-classroom",
+      "contentShowFrame": 1,
+      "snap": true
+    },
+    {
+      "id": "classroom",
+      "type": "animated",
+      "component": "ProgramSection",
+      "contentKey": "classroom",
+      "sequenceFolder": "classroom-educraft",
+      "contentShowFrame": 1,
+      "snap": true,
+      "program": "classroom"
+    },
+    {
+      "id": "educraft",
+      "type": "animated",
+      "component": "ProgramSection",
+      "contentKey": "educraft",
+      "sequenceFolder": "educraft-karate",
+      "contentShowFrame": 1,
+      "snap": true,
+      "program": "educraft"
+    },
+    {
+      "id": "karate",
+      "type": "animated",
+      "component": "ProgramSection",
+      "contentKey": "karate",
+      "sequenceFolder": "karate-carpenter",
+      "contentShowFrame": 1,
+      "snap": true,
+      "program": "karate"
+    },
+    {
+      "id": "carpenter",
+      "type": "animated",
+      "component": "ProgramSection",
+      "contentKey": "carpenter",
+      "sequenceFolder": "carpenter-sports",
+      "contentShowFrame": 1,
+      "snap": true,
+      "program": "carpenter"
+    },
+    {
+      "id": "sports",
+      "type": "animated",
+      "component": "ProgramSection",
+      "contentKey": "sports",
+      "sequenceFolder": "sports-communication",
+      "contentShowFrame": 1,
+      "snap": true,
+      "program": "sports"
+    },
+    {
+      "id": "communication",
+      "type": "normal",
+      "component": "ProgramSection",
+      "contentKey": "communication",
+      "program": "communication"
+    },
+    {
+      "id": "more-detail",
+      "type": "normal",
+      "component": "MoreDetailSection",
+      "contentKey": "more-detail"
+    },
+    {
+      "id": "contact",
+      "type": "normal",
+      "component": "ContactSection",
+      "contentKey": "contact"
+    },
+    {
+      "id": "footer",
+      "type": "normal",
+      "component": "FooterSection",
+      "contentKey": "footer"
+    }
+  ]
+}
+

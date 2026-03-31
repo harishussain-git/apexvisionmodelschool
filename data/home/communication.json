@@ -1,0 +1,28 @@
+{
+  "section-name": "Expression",
+  "section-heading": "Communication",
+  "caption": "Students learn to present ideas clearly and confidently.",
+  "card-position": "left",
+  "metric-count": "50%",
+  "metric-count-text": "improvement in speaking confidence and clarity",
+  "section-bg-image": "/homepage/clay/comm-clay.webp",
+  "popup": {
+    "features": [
+      {
+        "name": "Speaking",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Guided speaking activities help students express themselves with confidence."
+      },
+      {
+        "name": "Confidence",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Presentation practice helps students become more comfortable sharing ideas."
+      },
+      {
+        "name": "Clarity",
+        "image": "/homepage/popup/image-placeholder.png",
+        "description": "Students learn how to organise thoughts and communicate them more clearly."
+      }
+    ]
+  }
+}

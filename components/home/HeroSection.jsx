@@ -4,7 +4,7 @@ export default function HeroSection({ overlay = false, content = {} }) {
   const RootTag = overlay ? "div" : "section"
   const rootClassName = overlay
     ? "relative h-full w-full"
-    : "relative h-screen w-full bg-gray-500"
+    : "relative h-screen w-full"
 
   const eyebrowValue = content.eyebrowValue ?? "45+"
   const eyebrow = content.eyebrow ?? "Years of Educational Excellence"
@@ -41,14 +41,6 @@ export default function HeroSection({ overlay = false, content = {} }) {
           </div>
         </div>
       </div>
-
-      {!overlay && (
-        <img
-          className="absolute left-0 top-0 z-10 h-full w-full object-cover saturate-0"
-          src="/homepage/clay/hero-clay.webp"
-          alt="hero"
-        />
-      )}
     </RootTag>
   )
 }

@@ -1,0 +1,75 @@
+{
+  "sequenceManifest": {
+    "hero-cloudtext": { "frames": 14, "ext": "webp" },
+    "cloudtext-schoolfront": { "frames": 14, "ext": "webp" },
+    "schoolfront-classroom": { "frames": 35, "ext": "webp" },
+    "classroom-educraft": { "frames": 43, "ext": "webp" },
+    "educraft-karate": { "frames": 27, "ext": "webp" },
+    "karate-carpenter": { "frames": 38, "ext": "webp" },
+    "carpenter-sports": { "frames": 27, "ext": "webp" },
+    "sports-communication": { "frames": 48, "ext": "webp" }
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "component": "HeroSection",
+      "sequenceFolder": "hero-cloudtext",
+      "contentShowFrame": 1
+    },
+    {
+      "id": "cloudtext",
+      "component": "CloudTextSection",
+      "sequenceFolder": "cloudtext-schoolfront",
+      "contentShowFrame": 1
+    },
+    {
+      "id": "school-front",
+      "component": "SchoolFrontSection",
+      "sequenceFolder": "schoolfront-classroom",
+      "contentShowFrame": 1
+    },
+    {
+      "id": "classroom",
+      "component": "ProgramSection",
+      "program": "classroom",
+      "sequenceFolder": "classroom-educraft",
+      "contentShowFrame": 1
+    },
+    {
+      "id": "educraft",
+      "component": "ProgramSection",
+      "program": "educraft",
+      "sequenceFolder": "educraft-karate",
+      "contentShowFrame": 1
+    },
+    {
+      "id": "karate",
+      "component": "ProgramSection",
+      "program": "karate",
+      "sequenceFolder": "karate-carpenter",
+      "contentShowFrame": 1
+    },
+    {
+      "id": "carpenter",
+      "component": "ProgramSection",
+      "program": "carpenter",
+      "sequenceFolder": "carpenter-sports",
+      "contentShowFrame": 1
+    },
+    {
+      "id": "sports",
+      "component": "ProgramSection",
+      "program": "sports",
+      "sequenceFolder": "sports-communication",
+      "contentShowFrame": 1
+    },
+    {
+      "id": "communication",
+      "component": "ProgramSection",
+      "program": "communication",
+      "sequenceFolder": "sports-communication",
+      "contentShowFrame": 1
+    }
+  ]
+}
+

@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Contact",
+  "title": "Begin a Thoughtful Conversation About Your Child's Education",
+  "primaryCta": {
+    "label": "Book an Admission Consultation",
+    "href": "#"
+  },
+  "secondaryCta": {
+    "label": "Read the Admissions FAQs",
+    "href": "#"
+  },
+  "formTitle": "Have a question about admissions?",
+  "formDescription": "We're happy to guide you and answer any questions about your child's journey at Apex.",
+  "submitLabel": "Request an Admission Call"
+}

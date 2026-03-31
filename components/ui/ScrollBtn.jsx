@@ -79,7 +79,7 @@ const ScrollDownBtn = ({
 
   return (
     <div
-      className={`fixed bottom-6 left-1/2 z-50 -translate-x-1/2 items-center gap-2 rounded-full bg-white/20 p-1.5 backdrop-blur-3xl md:flex ${
+      className={`fixed bottom-6 left-1/2 z-50 -translate-x-1/2 items-center gap-1 rounded-full bg-white/20 p-1.5 backdrop-blur-3xl md:flex ${
         shouldShow ? "flex" : "hidden"
       }`}
     >
