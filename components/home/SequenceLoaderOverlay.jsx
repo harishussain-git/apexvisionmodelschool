@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 export default function SequenceLoaderOverlay({
   loadedCount = 0,
   totalCount = 1,
@@ -19,24 +17,25 @@ export default function SequenceLoaderOverlay({
     >
       <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
         <div className="relative" style={{ width: logoWidth }}>
-          <Image
+          <img
             src="/icons/apex-logo.svg"
             alt="Apex Vision Model School"
-            width={680}
-            height={220}
-            priority
+            loading="eager"
+            decoding="sync"
+            fetchPriority="high"
             className="block h-auto w-full opacity-[0.12] grayscale"
           />
           <div
             className="absolute inset-y-0 left-0 overflow-hidden"
             style={{ width: `${progress}%` }}
           >
-            <Image
+            <img
               src="/icons/apex-logo.svg"
               alt=""
               aria-hidden="true"
-              width={680}
-              height={220}
+              loading="eager"
+              decoding="sync"
+              fetchPriority="high"
               className="block h-auto max-w-none"
               style={{ width: logoWidth }}
             />

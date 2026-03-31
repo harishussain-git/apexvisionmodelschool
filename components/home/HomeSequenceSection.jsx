@@ -41,13 +41,24 @@ const PRELOAD_FRAME_PATHS = PRELOAD_SECTIONS.flatMap((section) => {
 });
 
 const PRELOAD_FRAME_TOTAL = PRELOAD_FRAME_PATHS.length;
+const PRELOAD_STATIC_ASSET_TOTAL = 2;
+const PRELOAD_RESOURCE_TOTAL = PRELOAD_FRAME_TOTAL + PRELOAD_STATIC_ASSET_TOTAL;
+
+function loadImageAsset(src) {
+  return new Promise((resolve, reject) => {
+    const image = new window.Image();
+    image.onload = () => resolve(src);
+    image.onerror = () => reject(new Error(`Failed to load ${src}`));
+    image.src = src;
+  });
+}
 
 export default function HomeSequenceSection() {
   const wrapperRef = useRef(null);
   const viewportRef = useRef(null);
   const imageLayerRef = useRef(null);
   const [progress, setProgress] = useState(0);
-  const [loadedFrameCount, setLoadedFrameCount] = useState(0);
+  const [loadedAssetCount, setLoadedAssetCount] = useState(0);
   const [isLoaderReady, setIsLoaderReady] = useState(false);
   const [isLoaderMounted, setIsLoaderMounted] = useState(true);
   const [isHeroIntroActive, setIsHeroIntroActive] = useState(true);
@@ -60,36 +71,47 @@ export default function HomeSequenceSection() {
     let cancelled = false;
     let completedCount = 0;
 
-    const markComplete = () => {
+    const markLoaded = () => {
       if (cancelled) {
         return;
       }
 
       completedCount += 1;
-      setLoadedFrameCount(completedCount);
+      setLoadedAssetCount(completedCount);
+    };
 
-      if (completedCount >= PRELOAD_FRAME_TOTAL) {
+    const preloadResources = async () => {
+      try {
+        if (document.fonts?.load) {
+          await document.fonts.load('700 48px "RFRufo"');
+          if (document.fonts.ready) {
+            await document.fonts.ready;
+          }
+        }
+      } catch {}
+
+      markLoaded();
+
+      try {
+        await loadImageAsset("/icons/apex-logo.svg");
+      } catch {}
+
+      markLoaded();
+
+      for (const src of PRELOAD_FRAME_PATHS) {
+        try {
+          await loadImageAsset(src);
+        } catch {}
+
+        markLoaded();
+      }
+
+      if (!cancelled) {
         setIsLoaderReady(true);
       }
     };
 
-    if (!PRELOAD_FRAME_PATHS.length) {
-      const fallbackFrame = window.requestAnimationFrame(() => {
-        setIsLoaderReady(true);
-      });
-
-      return () => {
-        cancelled = true;
-        window.cancelAnimationFrame(fallbackFrame);
-      };
-    }
-
-    PRELOAD_FRAME_PATHS.forEach((src) => {
-      const image = new window.Image();
-      image.onload = markComplete;
-      image.onerror = markComplete;
-      image.src = src;
-    });
+    preloadResources();
 
     return () => {
       cancelled = true;
@@ -262,8 +284,8 @@ export default function HomeSequenceSection() {
     >
       {isLoaderMounted ? (
         <SequenceLoaderOverlay
-          loadedCount={loadedFrameCount}
-          totalCount={PRELOAD_FRAME_TOTAL}
+          loadedCount={loadedAssetCount}
+          totalCount={PRELOAD_RESOURCE_TOTAL}
           isReady={isLoaderReady}
         />
       ) : null}
