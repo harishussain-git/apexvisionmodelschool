@@ -1,7 +1,6 @@
 import CloudText from "@/components/home/overlays/CloudText";
 import HeroSection from "./HeroSection";
 import SchoolFrontSection from "./SchoolFrontSection";
-import FakeRuntimeError from "@/components/home/sections/FakeRuntimeError";
 
 function withFrameRanges(sections = []) {
   let startFrame = 1;
@@ -19,8 +18,7 @@ function withFrameRanges(sections = []) {
     return nextSection;
   });
 }
-
-const runtimeErrorOverlay = <FakeRuntimeError />;
+//changed the img res
 
 const sections = withFrameRanges([
   {

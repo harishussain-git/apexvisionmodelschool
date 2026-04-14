@@ -310,6 +310,10 @@ export default function HomeSequenceSection() {
           style={{
             transform: `translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(${SEQUENCE_DEPTH_CONFIG.baseOverscanScale})`,
             transformStyle: "preserve-3d",
+            WebkitTransformStyle: "preserve-3d",
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+            transformOrigin: "center center",
             willChange: "transform",
           }}
         >

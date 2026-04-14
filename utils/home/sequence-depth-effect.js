@@ -4,17 +4,66 @@ import { useEffect, useRef, useState } from "react";
 
 export const SEQUENCE_DEPTH_CONFIG = {
   desktopBreakpoint: 1024,
-  maxRotateX: 1.5,
-  maxRotateY: 2.5,
-  maxTranslate: 8,
+  maxRotateX: 0.5,
+  maxRotateY: 0.9,
+  maxTranslate: 2,
   perspective: 1200,
-  scale: 1.005,
-  baseOverscanScale: 1.04,
-  smoothing: 0.1,
+  scale: 1.002,
+  baseOverscanScale: 1.02,
+  smoothing: 0.06,
 };
 
 function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
+}
+
+function subscribeToMediaQuery(query, handler) {
+  if (typeof query.addEventListener === "function") {
+    query.addEventListener("change", handler);
+    return () => {
+      query.removeEventListener("change", handler);
+    };
+  }
+
+  if (typeof query.addListener === "function") {
+    query.addListener(handler);
+    return () => {
+      query.removeListener(handler);
+    };
+  }
+
+  return () => {};
+}
+
+function getBrowserDepthProfile() {
+  if (typeof navigator === "undefined") {
+    return {
+      allowRotation: true,
+      translateMultiplier: 1,
+      scaleMultiplier: 1,
+    };
+  }
+
+  const userAgent = navigator.userAgent;
+  const isFirefox = /Firefox/i.test(userAgent);
+  const isSafari =
+    /Safari/i.test(userAgent) &&
+    !/Chrome|Chromium|Edg|OPR|OPiOS|CriOS|FxiOS/i.test(userAgent);
+  const isChromium = /Chrome|Chromium|Edg|OPR|CriOS/i.test(userAgent) && !isFirefox;
+
+  if (!isChromium || isFirefox || isSafari) {
+    return {
+      allowRotation: false,
+      translateMultiplier: 0.75,
+      scaleMultiplier: 1,
+    };
+  }
+
+  return {
+    allowRotation: true,
+    translateMultiplier: 1,
+    scaleMultiplier: 1,
+  };
 }
 
 export function useSequenceDepthEffect({
@@ -27,6 +76,11 @@ export function useSequenceDepthEffect({
   const currentRef = useRef({ x: 0, y: 0 });
   const activeRef = useRef(false);
   const [isDesktopEnabled, setIsDesktopEnabled] = useState(false);
+  const [browserDepthProfile, setBrowserDepthProfile] = useState({
+    allowRotation: true,
+    translateMultiplier: 1,
+    scaleMultiplier: 1,
+  });
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -46,16 +100,17 @@ export function useSequenceDepthEffect({
     };
 
     updateAvailability();
+    setBrowserDepthProfile(getBrowserDepthProfile());
 
-    desktopQuery.addEventListener("change", updateAvailability);
-    pointerQuery.addEventListener("change", updateAvailability);
-    reducedMotionQuery.addEventListener("change", updateAvailability);
+    const unsubscribeDesktop = subscribeToMediaQuery(desktopQuery, updateAvailability);
+    const unsubscribePointer = subscribeToMediaQuery(pointerQuery, updateAvailability);
+    const unsubscribeReducedMotion = subscribeToMediaQuery(reducedMotionQuery, updateAvailability);
     window.addEventListener("resize", updateAvailability);
 
     return () => {
-      desktopQuery.removeEventListener("change", updateAvailability);
-      pointerQuery.removeEventListener("change", updateAvailability);
-      reducedMotionQuery.removeEventListener("change", updateAvailability);
+      unsubscribeDesktop();
+      unsubscribePointer();
+      unsubscribeReducedMotion();
       window.removeEventListener("resize", updateAvailability);
     };
   }, []);
@@ -90,13 +145,19 @@ export function useSequenceDepthEffect({
       current.x += (target.x - current.x) * SEQUENCE_DEPTH_CONFIG.smoothing;
       current.y += (target.y - current.y) * SEQUENCE_DEPTH_CONFIG.smoothing;
 
-      const rotateX = current.y * -SEQUENCE_DEPTH_CONFIG.maxRotateX;
-      const rotateY = current.x * -SEQUENCE_DEPTH_CONFIG.maxRotateY;
-      const translateX = current.x * SEQUENCE_DEPTH_CONFIG.maxTranslate;
-      const translateY = current.y * SEQUENCE_DEPTH_CONFIG.maxTranslate;
+      const rotateX = browserDepthProfile.allowRotation
+        ? current.y * -SEQUENCE_DEPTH_CONFIG.maxRotateX
+        : 0;
+      const rotateY = browserDepthProfile.allowRotation
+        ? current.x * -SEQUENCE_DEPTH_CONFIG.maxRotateY
+        : 0;
+      const translateX =
+        current.x * SEQUENCE_DEPTH_CONFIG.maxTranslate * browserDepthProfile.translateMultiplier;
+      const translateY =
+        current.y * SEQUENCE_DEPTH_CONFIG.maxTranslate * browserDepthProfile.translateMultiplier;
       const appliedScale =
         SEQUENCE_DEPTH_CONFIG.baseOverscanScale *
-        (activeRef.current ? SEQUENCE_DEPTH_CONFIG.scale : 1);
+        (activeRef.current ? SEQUENCE_DEPTH_CONFIG.scale * browserDepthProfile.scaleMultiplier : 1);
 
       layer.style.transform =
         `translate3d(${translateX.toFixed(2)}px, ${translateY.toFixed(2)}px, 0px) ` +
@@ -122,7 +183,7 @@ export function useSequenceDepthEffect({
       frameRef.current = window.requestAnimationFrame(animate);
     };
 
-    const handleMouseMove = (event) => {
+    const handlePointerMove = (event) => {
       const rect = viewport.getBoundingClientRect();
       if (!rect.width || !rect.height) {
         return;
@@ -139,21 +200,24 @@ export function useSequenceDepthEffect({
       startAnimation();
     };
 
-    const handleMouseLeave = () => {
+    const handlePointerLeave = () => {
       activeRef.current = false;
       targetRef.current = { x: 0, y: 0 };
       startAnimation();
     };
 
-    viewport.addEventListener("mousemove", handleMouseMove);
-    viewport.addEventListener("mouseleave", handleMouseLeave);
+    const moveEvent = "onpointermove" in window ? "pointermove" : "mousemove";
+    const leaveEvent = "onpointerleave" in window ? "pointerleave" : "mouseleave";
+
+    viewport.addEventListener(moveEvent, handlePointerMove);
+    viewport.addEventListener(leaveEvent, handlePointerLeave);
 
     return () => {
-      viewport.removeEventListener("mousemove", handleMouseMove);
-      viewport.removeEventListener("mouseleave", handleMouseLeave);
+      viewport.removeEventListener(moveEvent, handlePointerMove);
+      viewport.removeEventListener(leaveEvent, handlePointerLeave);
       window.cancelAnimationFrame(frameRef.current);
       frameRef.current = null;
       setNeutralTransform();
     };
-  }, [enabled, isDesktopEnabled, layerRef, viewportRef]);
+  }, [browserDepthProfile, enabled, isDesktopEnabled, layerRef, viewportRef]);
 }
